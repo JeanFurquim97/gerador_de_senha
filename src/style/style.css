@@ -14,7 +14,15 @@ body{
 header {
     background-color: #008337;
     padding: 20px;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #121213;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .social-link {
