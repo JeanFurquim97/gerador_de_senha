@@ -3,10 +3,12 @@ const lengthInput = document.getElementById("length");
 const lengthValue = document.getElementById("length-value");
 const uppercaseCheckbox = document.getElementById("uppercase");
 const symbolsCheckbox = document.getElementById("symbols");
+const numbersCheckbox = document.getElementById("numbers");
 
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+const numbers = "0123456789"
 
 lengthInput.addEventListener("input", () => {
     lengthValue.textContent = lengthInput.value;
@@ -19,6 +21,9 @@ function createPassword() {
     }
     if (symbolsCheckbox.checked) {
         chars += symbols;
+    }
+    if (numbersCheckbox.checked) {
+        chars += numbers;
     }
 
     let password = "";
